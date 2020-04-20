@@ -100,6 +100,7 @@ body {
 }
 .store-container {
   border-bottom: 1px solid grey;
+  cursor: pointer;
 }
 
 .store-number-container {
