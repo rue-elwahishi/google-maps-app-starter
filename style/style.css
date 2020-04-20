@@ -59,4 +59,50 @@ body {
   left: 100px;
   border-radius: 30px;
   bottom: 20px;
+  display: flex;
+}
+.store-address {
+  font-size: 21px;
+  color: #333;
+  margin-top: 32px;
+}
+.store-phone-number {
+  color: grey;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.store-number {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  background-color: #3454;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.store-address span {
+  display: block;
+}
+.store-container-background {
+  display: flex;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.stores-list {
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow-y: scroll;
+  flex-grow: 1;
+}
+.store-info-container {
+  flex-grow: 1;
+}
+.store-container {
+  border-bottom: 1px solid grey;
+}
+
+.store-number-container {
+  display: flex;
+  align-items: center;
 }

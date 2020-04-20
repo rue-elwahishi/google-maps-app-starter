@@ -10,9 +10,33 @@ function initMap() {
     zoom: 8,
   });
   infoWindow = new google.maps.InfoWindow();
+  displayStores();
   showStoreMarkers();
 }
 
+function displayStores() {
+  var storeHTML;
+  stores.forEach(function (store, index) {
+    storeHTML += `<div class="store-container">
+    <div class="store-container-background">
+      <div class="store-info-container">
+        <div class="store-address">
+          <span> ${store.addressLines[0]}</span>
+          <span>
+            ${store.addressLines[1]}
+          </span>
+        </div>
+
+        <div class="store-phone-number"> ${store.phoneNumber}</div>
+      </div>
+      <div class="store-number-container">
+        <div class="store-number">${index + 1}</div>
+      </div>
+    </div>
+  </div>`;
+  });
+  document.querySelector(".stores-list").innerHTML = storeHTML;
+}
 function showStoreMarkers() {
   var bounds = new google.maps.LatLngBounds();
   stores.forEach(function (store, index) {
